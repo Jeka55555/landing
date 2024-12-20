@@ -1,9 +1,21 @@
+import InfoBoxConteiner from "@/components/content/InfoBoxConteiner";
 import InfoContainer from "@/components/content/InfoContainer";
 import OurWorkConteiner from "@/components/content/OurWorkConteiner";
 
 export default function Home() {
   return (
     <>
+      <div className="flex flex-col justify-center items-center h-screen w-screen gap-[40px] ">
+        <InfoBoxConteiner
+          iconLink1={"/Sixgill-Logo-2.png"}
+          iconLink2={"/Phil-Resler.png"}
+          title={"Phil Ressler"}
+          info={
+            " “We’ve used Distillery extensively for both web app and mobile app development projects. They consistently provide high-qualitydevelopers and afford us a cost-effective flexibility we didn’t havebefore. In turn, this allows us to rapidly provide high-qualitysolutions for our clients.” "
+          }
+          functions={"CEO, Sixgill"}
+        />
+      </div>
       <div className="flex flex-col md:flex-row justify-center items-center h-screen w-screen gap-[40px] md:gap-[20px]">
         <OurWorkConteiner
           title={"Shaving seconds off millons of transactions."}
