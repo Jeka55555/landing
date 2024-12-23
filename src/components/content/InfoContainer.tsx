@@ -13,7 +13,7 @@ const InfoContainer = ({
 }: IInfoContainerProps) => {
   const lines = title.split(" ");
   return (
-    <div className="w-full max-w-[1000px] bg-[#133585] rounded-[30px] flex flex-col md:flex-row overflow-hidden">
+    <div className=" border border-gray-300 w-full max-w-[1000px] bg-[#133585] rounded-[30px] flex flex-col md:flex-row overflow-hidden">
       <div className="flex w-full md:w-[35%] items-center justify-center">
         <Image
           className="rounded-l-[30px] rounded-r-[30px] md:rounded-r-none"

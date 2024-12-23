@@ -17,7 +17,7 @@ const OurWorkConteiner = ({
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className=" w-[320px] h-[450px] rounded-[30px] text-white flex flex-col p-[40px] justify-between "
+      className="border border-gray-300  w-[320px] h-[450px] rounded-[30px] text-white flex flex-col p-[40px] justify-between "
     >
       <div className="">
         <Image src={iconLink1} alt={title} width={130} height={40} priority />
