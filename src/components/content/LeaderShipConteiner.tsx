@@ -16,8 +16,8 @@ const LeaderShipConteiner: React.FC<ImageTextComponentProps> = ({
 }) => {
   return (
     <div
-      className={`w-[1150px] h-[550px]  flex  items-center  ${
-        reverse ? "flex-row-reverse" : ""
+      className={`w-[100%]  flex  items-center flex-col lg:flex-row  ${
+        reverse ? "flex-col lg:flex-row-reverse " : ""
       }`}
     >
       <Image
@@ -26,9 +26,9 @@ const LeaderShipConteiner: React.FC<ImageTextComponentProps> = ({
         width={550}
         height={550}
         priority
-        className={`mr-[30px] ${reverse ? "ml-[30px]" : ""}`}
+        className={`  ${reverse ? " w-[100%] " : ""}`}
       />
-      <div className="flex flex-col ">
+      <div className="flex flex-col p-[20px]">
         <div className="text-[#19B8E8] font-bold text-[16px] mb-[10px]">
           {functions}
         </div>

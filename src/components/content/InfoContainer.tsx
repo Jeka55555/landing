@@ -13,19 +13,18 @@ const InfoContainer = ({
 }: IInfoContainerProps) => {
   const lines = title.split(" ");
   return (
-    <div className=" border border-gray-300 w-full max-w-[1000px] bg-[#133585] rounded-[30px] flex flex-col md:flex-row overflow-hidden">
-      <div className="flex w-full md:w-[35%] items-center justify-center">
-        <Image
-          className="rounded-l-[30px] rounded-r-[30px] md:rounded-r-none"
-          src={iconLink1}
-          alt={title}
-          width={350}
-          height={150}
-          priority
-        />
-      </div>
-      <div className="flex w-full md:w-[65%] flex-col md:flex-row items-center justify-center p-[20px] md:p-[40px]">
-        <div className="mb-4 md:mb-0 md:mr-[40px]">
+    <div className=" border border-gray-300  w-[60%] bg-[#133585] rounded-[30px] flex justify-between gap-[15px] flex-col lg:flex-row lg:w-[100%] ">
+      <Image
+        className=" rounded-tl-[30px] rounded-tr-[30px] rounded-bl-none w-[100%]   lg:w-[350px] lg:h-auto  lg:rounded-bl-[30px] lg:rounded-tr-none "
+        src={iconLink1}
+        alt={title}
+        width={350}
+        height={150}
+        priority
+      />
+
+      <div className="flex  items-center justify-center">
+        <div className=" w-[100px] h-[100px]">
           <Image
             src={iconLink2}
             alt={title}
@@ -34,13 +33,9 @@ const InfoContainer = ({
             priority
           />
         </div>
-        <div className="text-white text-center font-bold text-[20px] md:text-[24px] lg:text-[30px] leading-tight">
-          {lines.map((line, index) => (
-            <span key={index} className="block">
-              {line}
-            </span>
-          ))}
-        </div>
+      </div>
+      <div className="flex justify-center items-center pb-[35px]  lg:pr-[25px] lg:pb-[0px] ">
+        <p className="text-white  font-bold text-[30px]   ">{title}</p>
       </div>
     </div>
   );
