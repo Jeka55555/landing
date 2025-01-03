@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 interface IInfoBoxContainerProps {
   iconLink1: string;
@@ -14,7 +16,10 @@ const InfoBoxConteiner = ({
   functions,
 }: IInfoBoxContainerProps) => {
   return (
-    <div className="border border-gray-300 w-[580px] h-[480px] rounded-[60px] flex flex-col p-[40px] justify-between">
+    <motion.div
+      whileInView={{ opacity: [0, 1], scale: [0.5, 1] }}
+      className="border border-gray-300 w-[580px] h-[480px] rounded-[60px] flex flex-col p-[40px] justify-between"
+    >
       <div>
         <div>
           <Image
@@ -42,7 +47,7 @@ const InfoBoxConteiner = ({
           <div className="text-[16px] text-[#626262]">{functions}</div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

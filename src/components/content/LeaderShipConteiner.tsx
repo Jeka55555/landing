@@ -1,4 +1,7 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
+
 interface ImageTextComponentProps {
   iconLink1: string;
   title: string;
@@ -6,6 +9,8 @@ interface ImageTextComponentProps {
   functions: string;
   name: string;
 }
+
+const MotionImage = motion(Image);
 
 const LeaderShipConteiner: React.FC<ImageTextComponentProps> = ({
   iconLink1,
@@ -20,15 +25,20 @@ const LeaderShipConteiner: React.FC<ImageTextComponentProps> = ({
         reverse ? "flex-col lg:flex-row-reverse " : ""
       }`}
     >
-      <Image
+      <MotionImage
+        whileInView={{ x: reverse ? [500, 0] : [-500, 0] }}
         src={iconLink1}
         alt={title}
         width={550}
         height={550}
         priority
-        className={`  ${reverse ? " w-[100%] " : ""}`}
+        className={`  ${reverse ? " w-[100%] " : "w-[100%]"}`}
       />
-      <div className="flex flex-col p-[20px]">
+
+      <motion.div
+        whileInView={{ x: reverse ? [-500, 0] : [500, 0] }}
+        className="flex flex-col p-[20px]"
+      >
         <div className="text-[#19B8E8] font-bold text-[16px] mb-[10px]">
           {functions}
         </div>
@@ -43,7 +53,7 @@ const LeaderShipConteiner: React.FC<ImageTextComponentProps> = ({
           height={30}
           priority
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 interface IBlogConteinerProps {
   title: string;
@@ -6,7 +8,10 @@ interface IBlogConteinerProps {
 }
 const BlogConteiner = ({ title, iconLink1, info }: IBlogConteinerProps) => {
   return (
-    <div className=" border border-gray-300 w-[320px] h-[450px] rounded-[30px] flex flex-col  ">
+    <motion.div
+      whileInView={{ opacity: [0, 1], scale: [0.5, 1] }}
+      className=" border border-gray-300 w-[320px] h-[450px] rounded-[30px] flex flex-col  "
+    >
       <Image
         className="rounded-t-[30px]"
         src={iconLink1}
@@ -19,7 +24,7 @@ const BlogConteiner = ({ title, iconLink1, info }: IBlogConteinerProps) => {
         <div className="text-[19px] font-bold mb-[10px] ">{title}</div>
         <div className="text-[16px] text-[#626262] ">{info}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
